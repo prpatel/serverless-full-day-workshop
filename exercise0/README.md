@@ -20,7 +20,7 @@ Head over to the [Cloud Function Web Console](https://cloud.ibm.com/openwhisk) n
 
 ### Click on Actions on the left side to see all your created Cloud Functions
 
-![IBM Cloud Functions Home](images/ex0image2.png)
+![IBM Cloud Functions Home](../images/ex0image2.png)
 
 
 
@@ -30,21 +30,21 @@ Head over to the [Cloud Function Web Console](https://cloud.ibm.com/openwhisk) n
 2. You'll see several options, choose:
 "Create Action
  Actions contain your function code and are invoked by events or REST API calls."
- ![IBM Cloud Functions Home](images/ex0image3.png)
+ ![IBM Cloud Functions Home](../images/ex0image3.png)
  3. On the next screen enter in these things:
      * Action Name: createdFromConsole
      * Enclosing Package: (leave default, we'll work with packages later)
      * Runtime: (pick Node.js 10 or just leave the default)
      * Click 'CREATE in the bottom right corner'
 4. Now we'll see a console with our code
-   ![IBM Cloud Functions Home](images/ex0image4a.png) 
+   ![IBM Cloud Functions Home](../images/ex0image4a.png) 
 5. This is the "Action Details" view   
 (NOTE: Don't worry if you don't know JavaScript or are not interested in creating Cloud Functions with it. We're going to use JavaScript in this exercise just for demonstration purposes.)   
    
 ### Executing and working with the function from the console 
  1. Go ahead and click "INVOKE" on the right side to see your cloud function work!
  2. An invokation of a Cloud Function is called an "Activation". You can see the Activations and the output just below the code now:
- ![IBM Cloud Functions Home](images/ex0image5.png) 
+ ![IBM Cloud Functions Home](../images/ex0image5.png) 
  3. Things to note:
     * The Activation ID (we'll discuss that in a future exercise)
     * Results (this is JSON,  you'll recognize it from the code in the code editor above this Activations section)
@@ -57,7 +57,7 @@ let name = params.name;
 3. Change the return line to look this this:
 return { message: 'Hello ' + name };
 4. Your code should look like this now:
-![IBM Cloud Functions Home](images/ex0image6.png) 
+![IBM Cloud Functions Home](../images/ex0image6.png) 
 5. Click 'SAVE' on the top right
 6. Click 'INVOKE' on the top right
 7. The result should say:
@@ -65,9 +65,9 @@ return { message: 'Hello ' + name };
   "message": "Hello undefined"
 }
 8. Let's fix that "undefined"! Click on 'Change Input' on the top right
-![IBM Cloud Functions Home](images/ex0image7.png) 
+![IBM Cloud Functions Home](../images/ex0image7.png) 
 9. Enter this in (put your own name in, lol!): {"name" : "Pratik"} 
-![IBM Cloud Functions Home](images/ex0image8.png)
+![IBM Cloud Functions Home](../images/ex0image8.png)
 10. Click APPLY
 11. Click INVOKE
 12. SUCCESS! You should see your name in the results:
@@ -83,7 +83,7 @@ console.log("params sent to this cloud function:", params)
 2. SAVE
 3. INVOKE 
 4. Now you'll see the Log section has our log output:
-![IBM Cloud Functions Home](images/ex0image9.png) 
+![IBM Cloud Functions Home](../images/ex0image9.png) 
 
 You can also see logs for previous activations from the [Cloud Functions Dashboard](https://cloud.ibm.com/openwhisk/dashboard). Click on the activation id. 
 
@@ -92,7 +92,7 @@ You can also see logs for previous activations from the [Cloud Functions Dashboa
 Let's see how we can invoke our Cloud Function from a web browser!
 
 1. While still on the "Action details" view, on the left side click ENDPOINTS
-![IBM Cloud Functions Home](images/ex0image10.png)   
+![IBM Cloud Functions Home](../images/ex0image10.png)   
 2. You'll see "ENABLE AS WEB ACTION". Click it!
 3. Click SAVE on the top right side
 4. A new section appears right below, with a URL ending with your Cloud Function's name:

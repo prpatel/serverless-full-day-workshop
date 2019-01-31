@@ -86,7 +86,7 @@ ibmcloud fn action update helloJava --web true
 ```    
 
 * Check that it's enabled by going to the [IBM Cloud Functions Console](https://cloud.ibm.com/openwhisk/actions)
-![IBM Cloud Functions Home](images/ex0image2.png)
+![IBM Cloud Functions Home](../images/ex0image2.png)
 
 * Since this Cloud Function just returns JSON, we need to append ".json" to the URL. You can test this by using curl (use your URL that you got from command above):
 ```
