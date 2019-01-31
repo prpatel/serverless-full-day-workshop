@@ -16,7 +16,7 @@ Goals:
 
 Head over to the [Cloud Function Web Console](https://cloud.ibm.com/openwhisk) now and login, if you're not already. You'll see the home screen like below.
 
-![IBM Cloud Functions Home](images/ex0image1.png)
+![IBM Cloud Functions Home](../images/ex0image1.png)
 
 ### Click on Actions on the left side to see all your created Cloud Functions
 
