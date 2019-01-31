@@ -48,6 +48,4 @@ public class CreateEngagement {
         response.addProperty("id", jfokus.get_id());
         return response;
     }
-
-
 }

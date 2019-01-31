@@ -11,6 +11,7 @@ import com.google.gson.JsonObject;
 import com.cloudant.client.api.model.Document;
 
 import static com.cloudant.client.api.query.Expression.eq;
+import static com.cloudant.client.api.query.Operation.and;
 
 import java.io.IOException;
 import java.lang.reflect.ParameterizedType;

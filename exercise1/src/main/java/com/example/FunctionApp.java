@@ -36,7 +36,7 @@ public class FunctionApp {
     if (nameArg == null) {
       result = "Hello! Welcome to OpenWhisk";
     } else {
-      result = "Hello " + nameArg.getAsString() + " welcome to Dawscon!!!";
+      result = "Hello " + nameArg.getAsString();
     }
     response.addProperty("greetings", result);
 
