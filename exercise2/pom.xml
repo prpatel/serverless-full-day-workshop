@@ -39,7 +39,7 @@
   <build>
     <finalName>create-engagement-fn</finalName>
     <plugins>
-      <!-- This helps in packaging the function depeendencies as uber jar-->
+      <!-- This helps in packaging the function dependencies as uber jar-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>

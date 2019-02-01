@@ -38,15 +38,15 @@ public abstract class CloudantObjectStore<T extends BaseCloudantObject> {
     /*
         Returns all of the entries only of the "type" that is represented by this
         Store / Collection
+        THIS THROWS AN EXCEPTION BECAUSE OF A BUG IN CLOUDANT JAVA LIB
      */
     public Collection<T> findAll() {
         QueryResult<T> qr;
         QueryBuilder qb = new QueryBuilder(
                 eq("type", clazz.getName()));
-
-        System.out.println("Generated query: " + qb.build());
-
-        qr = db.query(qb.build(), clazz);
+        String builtQuery = qb.build();
+        System.out.println("Generated query: " + builtQuery);
+        qr = db.query(builtQuery, clazz);
 
         return qr.getDocs();
     }
@@ -58,7 +58,8 @@ public abstract class CloudantObjectStore<T extends BaseCloudantObject> {
     public List<Document> getAllDocs() {
         List docs;
         try {
-            docs = db.getAllDocsRequestBuilder().build().getResponse().getDocs();
+            docs = db.getAllDocsRequestBuilder().includeDocs(true).build()
+                    .getResponse().getDocsAs(clazz);
         } catch (IOException e) {
             return null;
         }
@@ -107,7 +108,7 @@ public abstract class CloudantObjectStore<T extends BaseCloudantObject> {
 
 
     public long count() {
-        return findAll().size();
+        return getAllDocs().size();
     }
 
     public T cloneObject(T o){

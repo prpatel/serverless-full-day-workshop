@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonParser;
 import org.junit.Test;
+import org.junit.Ignore;
 
 import java.util.Properties;
 
@@ -13,6 +14,7 @@ import static org.junit.Assert.*;
 public class ServiceHelperTest {
 
     @Test
+    @Ignore
     public void getCloudCredentials() {
         String jsonString = "{\n" +
                 "    \"__bx_creds\": {\n" +
@@ -42,6 +44,7 @@ public class ServiceHelperTest {
     }
 
     @Test
+    @Ignore
     public void getLocalProperties() {
 
         String apikey = ServiceHelper.getLocalProperties("local.properties").getProperty("cloudant_apikey");
