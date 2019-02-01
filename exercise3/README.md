@@ -10,7 +10,14 @@ Goals:
 
 ## Creating a sequence
 
-# TODO
+Your instructor will discuss sequences, then you can run the following code to creat a sequence.
+
+
+ibmcloud fn action invoke --result greetAndUpperFn --param name "Pratik"
+* Create a sequence
+```ibmcloud fn action create greetAndUpperFn --sequence greetingReceivedFn,upperCaseFn```
+* Execute a sequence
+```ibmcloud fn action invoke --result greetAndUpperFn --param name "Pratik"```
 
 ## Exercise review
 
