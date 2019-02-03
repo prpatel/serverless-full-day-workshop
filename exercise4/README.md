@@ -1,4 +1,4 @@
-# Exercise 2 - Cloud Functions to interact with a Database
+# Exercise 4 - Cloud Functions to interact with a Database
 
 You know basic Cloud Functions now, so let's create some to do store and query from a database. We'll use a NoSQL DB called Cloudant.
 

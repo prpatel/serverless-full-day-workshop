@@ -1,4 +1,4 @@
-# Exercise 3 - Sequences to weave together Cloud Functions
+# Exercise 2 - Sequences to weave together Cloud Functions
 
 Sequences are how we invoke Cloud Functions back-to-back. You could write a Cloud Function A to invoke Cloud Functions B and C, but that is inefficient and costly - and most importantly, not idiomatic Serverless design. Your instructor will go into details on why this is the case. 
 

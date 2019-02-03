@@ -1,4 +1,4 @@
-# Exercise 4 - Using Cloud Function Triggers
+# Exercise 3 - Using Cloud Function Triggers
 
 Triggers for events are an integral part of building Serverless applications. In this exercise, we'll create triggers to invoke our Cloud Functions, rather than just calling them manually from the CLI or Web browser.
 
