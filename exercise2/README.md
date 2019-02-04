@@ -26,7 +26,7 @@ Your instructor will discuss sequences, then you can run the following code to c
 
 * Create a new Cloud Function called: "upperCaseFn" that simply takes an input property of "greetings", and returns a "result".
 
-    * Consider WHY I've asked you to name the input "greeting"
+    * Consider WHY I've asked you to name the input "greetings"
 
 * Create a sequence
 ```ibmcloud fn action create greetAndUpperCaseFn --sequence helloJava,upperCaseFn```
