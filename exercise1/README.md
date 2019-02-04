@@ -14,18 +14,24 @@ Goals:
 
 Go to the exercise1 folder, then:
 
-1. mvn package  
-2. ibmcloud fn action create helloJava target/hello-world-java.jar --main com.example.FunctionApp
-3. ibmcloud fn action invoke --result helloJava --param name YOUR_NAME
-(please use YOUR_NAME
+1. `mvn package`  
+
+2. `ibmcloud fn action create helloJava target/hello-world-java.jar --main com.example.FunctionApp`
+
+3. `ibmcloud fn action invoke --result helloJava --param name <YOUR_NAME>` 
+
+(please use YOUR_NAME)
 
 You should see:
-{
-    "greetings": "Hello YOUR_NAME"
-}
 
-"--result" means just show the results. Omit that, and see what you get back :)
-This also adds the "--blocking" flag, discussed below.
+```
+{
+    "greetings": "Hello <YOUR_NAME>"
+}
+```
+
+"`--result`" means just show the results. Omit that, and see what you get back :)
+This also adds the "`--blocking`" flag, discussed below.
 
 #### Open FunctionApp.java in this project and examine it
 
@@ -38,38 +44,38 @@ This also adds the "--blocking" flag, discussed below.
 
 ### Get to know some OpenWhisk commands
 
-* ibmcloud wsk list
+* `ibmcloud wsk list`
     * note that "wsk" is used here instead of fn! The ibmcloud" command wraps the OpenWhisk "wsk" command with either "fn" or "wsk"!
-* ibmcloud wsk action invoke --blocking helloJava
+* `ibmcloud wsk action invoke --blocking helloJava`
     * this invokes the action in an sync fashion, you'll get a alot of text back, but you're interested in this:
-    ***
+    ```
         "activationId": "13a3f62589214b7da3f62589214b7d1e",
-    ***
+    ```
     * this is what you'll use to get the result back later!
-* ibmcloud wsk action invoke helloJava
+* `ibmcloud wsk action invoke helloJava`
     * this invokes the action in an sync fashion, with something called an activationId
-        ***
+        ```
             ok: invoked /_/helloJava with id 5923d0321aa04fffa3d0321aa0cfffc2
-        ***
+        ```
         * this is what you'll use to get the result back later!
-        * ibmcloud wsk activation result 5923d0321aa04fffa3d0321aa0cfffc2
-        ***
-                        
+        * `ibmcloud wsk activation result 5923d0321aa04fffa3d0321aa0cfffc2`
+        
+        ```          
             {
                 "greetings": "Hello! Welcome to OpenWhisk"
             }
-        ***        
-    * To  get the last invocation result: ibmcloud wsk activation result --last
+        ```        
+    * To  get the last invocation result: `ibmcloud wsk activation result --last`
     * To get everything (not just result): ibmcloud wsk activation get 5923d0321aa04fffa3d0321aa0cfffc2
 
     
-* ibmcloud fn action update helloJava target/hello-world-java.jar --main com.example.FunctionApp
+* `ibmcloud fn action update helloJava target/hello-world-java.jar --main com.example.FunctionApp`
     * This will update the Cloud Function!              
 
 ### What about logs?
 
 * Each activation has logs!
-* ibmcloud wsk activation get --last
+* `ibmcloud wsk activation get --last`
     * look for  "logs"
 * I miss my "tail -f" ... how do I do that?
     * ibmcloud wsk activation poll

@@ -47,7 +47,8 @@ We need to create a rule to associate a trigger with a Cloud Function.
 * See that it was fired
 
 ```ibmcloud fn activation get --last```
- ibmcloud fn trigger fire locationUpdate --param name Human --param place "Earth"
+ ibmcloud fn trigger fire locationUpdate
+ 
 ## Create an alarm trigger
 
 Let's create a trigger that fires once and invokes one of our existing Cloud Functions.
